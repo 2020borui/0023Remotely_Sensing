@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sensor Introduction</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Borui Wang" />
+    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sensor Introduction
+]
+.subtitle[
+## <br/>Sentinel-2
+]
+.author[
+### Borui Wang
+]
+.institute[
+### CASA0023 Remotely Sensing Cities and Environments
+]
+.date[
+### 25/01/2025 2025-01-25
+]
+
+---
+
+
+
+class: inverse, center, middle
+
+# Introduction
+
+
+---
+
+##  Introduction 
+
+Sentinel-2 is a European mission that captures wide, high-resolution, multi-spectral images. It consists of two satellites, Sentinel-2A and Sentinel-2B, which share the same orbit and are spaced 180 degrees apart. 
+
+### The 4 resolutions of the Sentinel-2:  
+
+
+- **Spectral** = It has 13 spectral bands, from the Visible (VNIR) and Near Infra-Red (NIR) to the Short Wave Infra-Red (SWIR)
+
+- **Spatial**= four bands at 10 m, six bands at 20 m, and three bands at 60 m spatial resolution
+
+- **Temporal**=It gives a high revisit frequency of 5 days.
+
+- **Radiometric** = MSI instrument is a 12-bit sensor with values between 0 and 4095 (4096 possibilities). The radiometric accuracy is less than 5% (goal 3%).  
+
+
+
+**Sentinel-2 has high revisit frequency and high-resolution imagery, which can offer data with lots of details, so it should be addressed with more caution when referring to private issues. **
+
+---
+
+### Sentinel-2 Applications
+
+It offers various services and applications, including land management, agriculture, forestry, disaster control, humanitarian relief operations, risk mapping, and security concerns.
+
+.pull-left[
+#### **The [main application](https://sentiwiki.copernicus.eu/web/s2-applications) include :**
+1. Maritime Surveillance  
+  
+1. Emergency Management  
+
+1. Land Monitoring  
+
+1. Urbanism  
+
+]
+
+.pull-right[
+
+&lt;img src="img/grid_image.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+image credit:[Sentinel Online](https://sentinel.esa.int/web/sentinel/copernicus/sentinel-2)
+]
+
+---
+
+#### **Band combinations commonly used in research ：**
+- **True colour**: natural colours humans would naturally see
+
+- **False Colour (urban)**: visualizing urbanized areas clearly plant
+
+- **False colour**: It is most frequently used to assess plant density and health.
+
+- **NDVI**: effective quantifying green vegetation index water
+
+- **Moisture Index**: It is used to determine vegetation water content and monitor droughts.
+
+- **SWIR**: measuring how much water is present in plants and soil
+
+- **NDWI**: for water body mapping cloud
+
+- **NDSI**: It is used to differentiate between cloud and snow cover Scene classification: Helping to distinguish between cloudy pixels, clear pixels and water pixels 
+
+
+
+.footnote[[*] Now, there are a few band combinations to monitor changes in cities and, in the future, we can generate new indexes for city-specific materials. It’s Sentinel-2 suitable for application in urban environments?]
+
+---
+class: inverse, middle, center
+
+# Application
+
+---
+
+### Sentinel-2’s Application in Agriculture
+#### Organisations and projects
+
+**GEOGLAM** is using agricultural Monitoring and Earth Observation（EO）to assess crop conditions on a country/global scale and to solve food security concerns.   
+
+**Sen2Agri** as a part of the monitoring tools being used, is generated from Sentinel-2 and Landsat 8, which can reflect vegetation status indicators and plot cultivated crop type maps.
+
+.pull-left[
+#### **The [Project](https://sentiwiki.copernicus.eu/web/s2-applications) :**
+A project named Cropland Mask for southern African countries makes high-resolution cropland masks by Sentinel-2 and improves field forecasting in support of food security status. It Contributes to the mechanisation of local agriculture.
+
+]
+
+.pull-right[
+
+&lt;img src="img/project.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+image credit:[geoglam](https://earthobservations.org/geoglam.php)
+]
+
+---
+
+### Sentinel-2’s Application in Agriculture
+#### Academic research
+
+In recent studies, Scholars have researched the use of Sentinel-2 for single-yield monitoring. &lt;a name=cite-CROPYIELDESTIMATION&gt;&lt;/a&gt;[Zalud (2025)](#bib-CROPYIELDESTIMATION) explored the correlation between Sentinel-2 NDVI and spring barley yield data.  
+
+&lt;a name=cite-huntHighResolutionWheat2019&gt;&lt;/a&gt;[Hunt, Blackburn, Carrasco, Redhead, and Rowland (2019)](#bib-huntHighResolutionWheat2019) explores the ability to map wheat fields with Sentinel-2. Random Forest Models created by Sentinel-2, combined with environment data (SWI) can provide accurate predictions. However, as the study area is England, the results may influenced by the cloud and will change hugely between different seasons.
+
+&lt;img src="img/wheat.png" width="30%" style="display: block; margin: auto;" /&gt;
+---
+
+## Reflection
+
+1. Sentinel-2 is a practical option for yield forecasting because it is free and has high resolution. Current research also proves the possibility of this.;
+
+1. Yield forecasting of EO can collaborate with high-accuracy GPS technology, including combined harvesters and planters. It not only improves the modernisation of agriculture but also provides more details data for agriculture monitoring;
+
+1. Different seasons can have various impacts on the accuracy of the results. So the monitoring methods need to be modified according to geographic location and seasons;
+
+1. Vegetation indices(NDVI, VIs), although are well developed through much research. However, it does not perform well in crop yield forecasting. Maybe need to import new indexes and band combinations;
+
+1. More research could be done on the application of the Sentinel-2 vegetation red edge bands for agricultural monitoring;
+
+
+
+.footnote[[*] Satellite-specific applications for agricultural monitoring.]
+
+---
+
+## Reference
+
+&lt;a name=bib-huntHighResolutionWheat2019&gt;&lt;/a&gt;[Hunt, M. L., G. A. Blackburn, L.
+Carrasco, et al.](#cite-huntHighResolutionWheat2019) (2019). "High Resolution
+Wheat Yield Mapping Using Sentinel-2". In: _Remote Sensing of Environment_ 233,
+p. 111410.
+
+&lt;a name=bib-CROPYIELDESTIMATION&gt;&lt;/a&gt;[Zalud, Z.](#cite-CROPYIELDESTIMATION)
+(2025). _Crop Yield Estimation in the Field Level Using Vegetation Indices_.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
